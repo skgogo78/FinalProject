@@ -483,8 +483,12 @@ function widgetAddAndModify(){
 			// arrSort( 배열 ) : 배열이 숫자일 경우 배열을 작은 수 부터 큰 수로 자동 정렬;
 			const reArr = arrSort(arr);
 			
+			if(reArr.length > 0){
 			// 가장 큰 수에 +1 을 해서 새로 생성된 위젯은 무조건 가장 위로 올라오게
-			return Number(reArr[reArr.length-1]) + 1;
+				return Number(reArr[reArr.length-1]) + 1;
+			} else {
+				return 1;
+			}
 			
 		})());
 		
@@ -946,7 +950,12 @@ function widgetAddAndModify(){
 				
 				const reArr = arrSort(arr);
 				
-				return Number(reArr[reArr.length-1]) + 1;
+				if(reArr.length > 0){
+					// 가장 큰 수에 +1 을 해서 새로 생성된 위젯은 무조건 가장 위로 올라오게
+					return Number(reArr[reArr.length-1]) + 1;
+				} else {
+					return 1;
+				}
 				
 			})());
 			
